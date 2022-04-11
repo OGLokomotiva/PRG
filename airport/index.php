@@ -1,4 +1,3 @@
-<!-- Connection to database -->
 <?php
 $connection = mysqli_connect(/*where*/"localhost", /*name*/"root", /*password*/"", "AwesomeAirport");
 
@@ -18,7 +17,6 @@ if(!$result) {
 
 ?>
 
-<!-- Write data of databse -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
