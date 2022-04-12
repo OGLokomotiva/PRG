@@ -1,10 +1,10 @@
 <?php
-$connection = mysqli_connect(/*where*/"localhost", /*name*/"root", /*password*/"", "AwesomeAirport");
+$connection = mysqli_connect("localhost", "root", "", "airport");
 
 if($connection){
-    echo "Připojení proběhlo úspěšně.";
+    echo "Databáze připojena";
 } else {
-     die("Ups, něco se pokazilo...");
+     die("Kruci písek, něco se pokazilo!");
 }
 
 $query = "SELECT * FROM airport";
@@ -12,7 +12,7 @@ $query = "SELECT * FROM airport";
 $result = mysqli_query($connection, $query);
 
 if(!$result) {
-    die("Ups, dotaz do databáze selhal" .mysqli_error());
+    die("Kruci písek, dotaz selhal!" .mysqli_error());
 }
 
 ?>
@@ -23,7 +23,7 @@ if(!$result) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AwesomeAirtport</title>
+    <title>airtport</title>
 </head>
 <body>
     <p>
